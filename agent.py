@@ -12,7 +12,7 @@ import torch.optim as optim
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 class DQH2Agent():
-    """Interacts with and learns from the environment."""
+    """Deep Q Network with 2 hidden layers that interacts with and learns from the environment."""
 
     def __init__(self, state_size, action_size, seed):
         """Initialize an Agent object.
@@ -112,18 +112,17 @@ class DQH2Agent():
 
 
 class DDQH2Agent(DQH2Agent):
-    '''
-    Implementation of a DDQN agent that interacts with and learns from the
-    environment
-    '''
+    """
+    Double Deep Q Network with 2 hidden layers that interacts with and learns from the environment
+    """
 
     def __init__(self, state_size, action_size, seed):
-        '''Initialize an DoubleDQNAgent object.
+        """Initialize an Agent object.
 
         :param state_size: int. dimension of each state
         :param action_size: int. dimension of each action
         :param seed: int. random seed
-        '''
+        """
         super(DDQH2Agent, self).__init__(state_size, action_size, seed)
 
         # Replay memory
@@ -132,11 +131,11 @@ class DDQH2Agent(DQH2Agent):
         self.t_step = 0
 
     def learn(self, experiences, gamma):
-        '''Update value parameters using given batch of experience tuples.
+        """Update value parameters using given batch of experience tuples.
 
         :param experiences: Tuple[torch.Tensor]. tuple of (s, a, r, s', done)
         :param gamma: float. discount factor
-        '''
+        """
         states, actions, rewards, next_states, dones = experiences
         rewards_ = torch.clamp(rewards, min=-1., max=1.)
 
@@ -161,7 +160,7 @@ class DDQH2Agent(DQH2Agent):
 
         
 class DQH3Agent():
-    """Interacts with and learns from the environment."""
+    """Deep Q Network with 3 hidden layers that interacts with and learns from the environment."""
 
     def __init__(self, state_size, action_size, seed):
         """Initialize an Agent object.
@@ -261,18 +260,17 @@ class DQH3Agent():
 
 
 class DDQH3Agent(DQH3Agent):
-    '''
-    Implementation of a DDQN agent that interacts with and learns from the
-    environment
-    '''
+    """
+    Double Deep Q Network with 3 hidden layers that interacts with and learns from the environment
+    """
 
     def __init__(self, state_size, action_size, seed):
-        '''Initialize an DoubleDQNAgent object.
+        """Initialize an Agent object.
 
         :param state_size: int. dimension of each state
         :param action_size: int. dimension of each action
         :param seed: int. random seed
-        '''
+        """
         super(DDQH3Agent, self).__init__(state_size, action_size, seed)
 
         # Replay memory
@@ -281,11 +279,11 @@ class DDQH3Agent(DQH3Agent):
         self.t_step = 0
 
     def learn(self, experiences, gamma):
-        '''Update value parameters using given batch of experience tuples.
+        """Update value parameters using given batch of experience tuples.
 
         :param experiences: Tuple[torch.Tensor]. tuple of (s, a, r, s', done)
         :param gamma: float. discount factor
-        '''
+        """
         states, actions, rewards, next_states, dones = experiences
         rewards_ = torch.clamp(rewards, min=-1., max=1.)
 

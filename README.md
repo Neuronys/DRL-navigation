@@ -28,14 +28,15 @@ The first command of the notebook needs to be run to install all the required pa
 </br>
 
 ## Repository Content
-The project consists of 9 files:
+The project consists of 10 files:
 * Navigation.ipynb - run this file in Jupyter Notebook
 * agent.py - the Agent class
 * model.py - the Deep Neural Networks models
 * hyperparams.py - tthe hyper parameters used
-* checkpointDQNH2.pth - saved trained model to use (Deep Q Network with 2 hidden layers)
-* checkpointDDQNH2.pth - saved trained model to use (Double Deep Q Network with 2 hidden layers)
-* checkpointDQNH3.pth - saved trained model to use (Deep Q Network with 3 hidden layers)
-* checkpointDDQNH3.pth - saved trained model to use (Double Deep Q Network with 3 hidden layers)
-* Report.md - description of the implementation
+* model_DQH2.pth - saved trained model to use (Deep Q Network with 2 hidden layers)
+* model_DDQH2.pth - saved trained model to use (Double Deep Q Network with 2 hidden layers)
+* model_DQH3.pth - saved trained model to use (Deep Q Network with 3 hidden layers)
+* model_DDQH3.pth - saved trained model to use (Double Deep Q Network with 3 hidden layers)
+* Report.pdf - description of the implementation
+* and this README.md file
 
